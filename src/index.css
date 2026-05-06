@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #243782;
+  --color-primary-light: #3A4EA2;
+  --color-success: #008D36;
+  --color-warning: #FFD100;
+  --color-danger: #DC241F;
+  --color-surface: #F8FAFC;
+  --color-text-main: #1E2A3E;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-4xl: 2.5rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-surface text-text-main antialiased;
+  }
+}
+
+.bento-card {
+  @apply bg-white border border-slate-200 rounded-3xl p-6 shadow-sm transition-all hover:shadow-xl hover:shadow-primary/5;
+}
+
+.markdown-body h1 { @apply text-2xl font-bold mb-4; }
+.markdown-body h2 { @apply text-xl font-bold mb-3; }
+.markdown-body p { @apply mb-4 leading-relaxed; }
+.markdown-body ul { @apply list-disc ml-6 mb-4; }
